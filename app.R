@@ -4,10 +4,8 @@ library(dplyr)
 library(reshape2)
 library(GGally)
 library(ggplot2)
-library(MASS)
-library(scales)
 
-setwd('/Users/PhilRotella/msan622/HW/HW3/')
+
 df <- read.csv('dataset_diabetes/diabetic_data.csv', stringsAsFactors = F)
 
 df$age2 <- sapply(df$age, function(x) as.numeric(gsub('-', '', substr(as.character(x), 2, 3))) + 5)
